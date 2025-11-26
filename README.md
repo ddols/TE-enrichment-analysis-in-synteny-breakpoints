@@ -3,7 +3,7 @@ Transposable Elements (TE) enrichment analysis in synteny breakpoints
 
 - [Prerequisites](#prerequisites)
 - [Step 1 - Preprocessing `RepeatMasker` outputs for the analysis](#step-1---preprocessing-repeatmasker-outputs-for-the-analysis)
-- [Step 2 - Run `breakpoints_analysis.R`](#step-2---run-breakpoints_analysis.r)
+- [Step 2 - Run `breakpoints_analysis.R`](#step-2---run-breakpoints_analysisr)
 
 # Summary 
 
