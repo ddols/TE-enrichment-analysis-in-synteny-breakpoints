@@ -15,5 +15,20 @@ The scripts shared in this repository are meant to perform an exploratory analys
 
 -  `R 3.5.0` or newer. The R script has been tested in `R 4.5.2`.
      -  Install [`BiocManager`](https://www.bioconductor.org/install/), [`GenomicRanges`](https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html), [`regioneR`](https://bioconductor.org/packages/release/bioc/html/regioneR.html), and `data.table` (`install.packages("data.table")`).
--  Access to the `RepeatMasker` outputs of the genomes we want to analyze. In particular, to `*.out.gff` and `*.out` files.
+-  Access to the `RepeatMasker` (>= 4.1.2) outputs of the genomes we want to analyze. In particular, to `*.out.gff` and `*.out` files.
 -  Access to the `syntenyBlock_coordinates.txt` output file from `GENESPACE`. 
+
+# Step 1 - Preprocessing `RepeatMasker` outputs for the analysis
+
+Contrary to what one could expect, some of `RepeatMasker` output files appear to be tab-delimited, but are not. This can be troublesome. You will find within the `/scripts` directory two scripts labeled by order of usage
+to preprocess the output files of interest. I would recommend simplifying the names of the scaffolds to avoid problems with the `R` script that you will run to perform the enrichment analysis. 
+
+First, we will run `1_format_RM.py` on the `*.out` file of `RepeatMasker`. This script will yield two outputs:
+-  A formatted version of the `*.out` file, which is tab-delimited.
+-  A list of all motifs (families) in the input `*.out` file and their associated class.
+
+To run this script, type the following command:
+
+``` r
+python 1_format_RM.py <input_RM.out> <output_RM.tab.out> <output_families.out>
+```
