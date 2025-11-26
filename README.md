@@ -9,10 +9,11 @@ The [outcomes of CRs](https://doi.org/10.1016/j.tree.2010.07.008) are diverse, a
 fusion or fission events. 
 
 The scripts shared in this repository are meant to perform an exploratory analysis to find candidate TE families that may be enriched or depleted across a distribution of **n*-bp flanking windows surrounding synteny breakpoints as identified by 
-[GENESPACE] in a macrosynteny analysis. By comparing the observed number of TEs within these breakpoint regions to a null distribution generated via a permutation test, the analysis identifies TE families that are significantly associated with breaks in genomic conservation.
+`GENESPACE` in a macrosynteny analysis. By comparing the observed number of TEs within these breakpoint regions to a null distribution generated via a permutation test, the analysis identifies TE families that are significantly associated with breaks in genomic conservation.
 
 # Prerequisites
 
 -  `R 3.5.0` or newer. The R script has been tested in `R 4.5.2`.
+     -  Install [`BiocManager`](https://www.bioconductor.org/install/), [`GenomicRanges`](https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html), [`regioneR`](https://bioconductor.org/packages/release/bioc/html/regioneR.html), and `data.table` (`install.packages("data.table")`).
 -  Access to the `RepeatMasker` outputs of the genomes we want to analyze. In particular, to `*.out.gff` and `*.out` files.
--  
+-  Access to the `syntenyBlock_coordinates.txt` output file from `GENESPACE`. 
