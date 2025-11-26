@@ -1,4 +1,5 @@
-# Transposable Elements (TE) enrichment analysis in synteny breakpoints
+Transposable Elements (TE) enrichment analysis in synteny breakpoints
+================
 
 - [Prerequisites](#prerequisites)
 - [Step 1 - Preprocessing `RepeatMasker` outputs for the analysis](#step-1-preprocessing-repeatmasker-outputs-for-the-analysis)
