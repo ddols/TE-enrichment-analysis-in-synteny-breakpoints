@@ -29,6 +29,6 @@ First, we will run `1_format_RM.py` on the `*.out` file of `RepeatMasker`. This 
 
 To run this script, type the following command:
 
-``` r
+```
 python 1_format_RM.py <input_RM.out> <output_RM.tab.out> <output_families.out>
 ```
