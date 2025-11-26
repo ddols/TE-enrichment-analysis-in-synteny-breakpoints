@@ -27,8 +27,15 @@ First, we will run `1_format_RM.py` on the `*.out` file of `RepeatMasker`. This 
 -  A formatted version of the `*.out` file, which is tab-delimited.
 -  A list of all motifs (families) in the input `*.out` file and their associated class.
 
-To run this script, type the following command:
+To run this script, type the following command. The first argument is the `*.out` file of `RepeatMasker`; the second argument, the name of the tab-delimited output; and the third argument, the name of the list file with the families and classes:
 
 ```
 python 1_format_RM.py <input_RM.out> <output_RM.tab.out> <output_families.out>
+```
+
+Then, we will run `2_add_TEclass.py`, which will take the `*.out.gff` file from `RepeatMasker` and the `<output_families.out>` file as inputs, and output the final `gff` table required to run the analysis.
+To run the script, type:
+
+```
+python 2_add_TEclass.py <input_RM.out.gff> <out_families.out> <final_out.gff>
 ```
